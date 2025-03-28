@@ -5,14 +5,17 @@ public class JugadorDTO {
     private String nombre;
     private String posicion;
     private int edad;
-    private String equipoNombre; // Solo el nombre del equipo
+    private String equipoNombre; //
+    // Solo el nombre del equipo
 
-    public JugadorDTO(Jugador jugador) {
-        this.id = jugador.getId();
-        this.nombre = jugador.getNombre();
-        this.posicion = jugador.getPosicion();
-        this.edad = jugador.getEdad();
-        this.equipoNombre = jugador.getEquipo().getNombre();
+    public JugadorDTO(String nombre, String posicion, int edad, String equipoNombre) {
+        this.nombre = nombre;
+        this.posicion = posicion;
+        this.edad = edad;
+        this.equipoNombre = equipoNombre;
+
+
+
     }
 
     // Getters setter
