@@ -16,7 +16,7 @@ public class FutbolApp extends Application {
     public void start(Stage primaryStage) {
         // Crear el campo de fútbol
         Pane root = new Pane();
-        root.setStyle("-fx-background-color: green;");
+        root.setStyle("-fx-background-color: black;");
 
         // Crear el balón (representado por un círculo)
         Circle balon = new Circle(50, Color.WHITE);
@@ -37,10 +37,10 @@ public class FutbolApp extends Application {
 
         // Acción para el gol del Equipo A
         golEquipoA.setOnAction(e -> {
-            JugadorDTO jugador = new JugadorDTO("Messi", "Equipo A");
+            JugadorDTO jugador = new JugadorDTO("Messi","delantero",29,"Equipo A");
             BalonDTO balonDTO = new BalonDTO("Adidas", 300, 200);
 
-            System.out.println(jugador.getNombre() + " ha marcado un gol para " + jugador.getEquipo());
+            System.out.println(jugador.getNombre() + " ha marcado un gol para " + jugador.getEquipoNombre());
             moverBalon(balon, 100, 200); // Mover hacia el lado izquierdo
         });
 
