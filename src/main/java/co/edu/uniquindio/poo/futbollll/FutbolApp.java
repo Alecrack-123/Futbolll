@@ -1,5 +1,11 @@
 package co.edu.uniquindio.poo.futbollll;
 
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -10,9 +16,15 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+
 public class FutbolApp extends Application {
 
-    @Override
+
+    public void start(Stage primaryStage) throws Exception {
+        // Cargar el archivo FXML
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista.fxml"));
+        Parent root = loader.load();
+
     public void start(Stage primaryStage) {
         // Crear el campo de fútbol
         Pane root = new Pane();
@@ -53,12 +65,14 @@ public class FutbolApp extends Application {
             moverBalon(balon, 500, 200); // Mover hacia el lado derecho
         });
 
+
         // Configurar la escena
         Scene scene = new Scene(root, 600, 500);
         primaryStage.setTitle("Simulación de Fútbol");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
 
     // Método para mover el balón
     private void moverBalon(Circle balon, double destinoX, double destinoY) {
@@ -67,6 +81,7 @@ public class FutbolApp extends Application {
         transition.setToY(destinoY - balon.getTranslateY());
         transition.play();
     }
+
 
     public static void main(String[] args) {
         launch(args);

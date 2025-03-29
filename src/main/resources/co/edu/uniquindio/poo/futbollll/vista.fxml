@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+
+<?import javafx.scene.image.Image?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.futbollll.FutbolController">
+    <children>
+        <!-- Fondo de la cancha -->
+        <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Cancha.jpg" />
+            </image>
+        </ImageView>
+
+        <!-- Marcador -->
+        <Label fx:id="marcador" layoutX="200.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-text-fill: white; -fx-background-color: black;" text="Equipo A: 0 - Equipo B: 0" />
+
+        <!-- Balón -->
+        <Circle fx:id="balon" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE" translateX="300.0" translateY="200.0" />
+
+        <!-- Botones -->
+        <Button fx:id="golEquipoA" layoutX="50.0" layoutY="420.0" mnemonicParsing="false" text="Gol Equipo A" />
+        <Button fx:id="golEquipoB" layoutX="550.0" layoutY="420.0" mnemonicParsing="false" text="Gol Equipo B" />
+    </children>
+</Pane>
